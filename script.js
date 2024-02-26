@@ -1,0 +1,1 @@
+impreme = (msg) => console.log(msg);

@@ -1,0 +1,30 @@
+.barra {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(182, 157, 112);
+    text-align: center;
+}
+.dispositivo{
+    font-size: 60px;
+    color: black;
+}
+
+@media (min-width: 800px) {
+    .barra{
+        height: 150px;
+        background-color: rgb(174, 144, 241) ;
+    }
+    .dispositivo{
+        display: none;
+    }
+}
+
+@media (min-width: 1228px){
+    .barra{
+        height: 200px;
+        background-color: rgb(197, 161, 150);
+    }
+}
+.rodape{
+    text-align: center;
+}
