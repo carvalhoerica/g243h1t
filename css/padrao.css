@@ -1,0 +1,52 @@
+.barra {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(182, 157, 112);
+    text-align: center;
+}
+.mobile{
+    font-size: 60px;
+    color: black;
+    text-align: center;
+}
+.tablet{
+    display: none;
+}
+.desktop{
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .barra{
+        height: 150px;
+        background-color: rgb(174, 144, 241) ;
+    }
+    .mobile{
+        display: none;
+    }
+    .tablet{
+        display: inline;
+        font-size: 70px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+}
+
+@media (min-width: 1228px){
+    .barra{
+        height: 200px;
+        background-color: rgb(197, 161, 150);
+    }
+    .tablet{
+        display: none;
+    }
+    .desktop{
+        display: inline;
+        font-size: 80px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+}
+.rodape{
+    text-align: center;
+}
