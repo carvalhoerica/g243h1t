@@ -4,32 +4,70 @@
     background-color: rgb(182, 157, 112);
     text-align: center;
 }
-.mobile{
+#mobile{
     font-size: 60px;
     color: black;
     text-align: center;
 }
-.tablet{
+#tablet{
     display: none;
 }
-.desktop{
+#desktop{
     display: none;
 }
-
+.conteudo {
+    width: 100%;
+    background-color: bisque;
+}
+.botoes {
+    width: 100%;
+    height: 30px;
+    background-color: #dbdbdb;
+    font-size: 22px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
 @media (min-width: 800px) {
     .barra{
         height: 150px;
         background-color: rgb(174, 144, 241) ;
     }
-    .mobile{
+    #mobile{
         display: none;
     }
-    .tablet{
+    #tablet{
         display: inline;
         font-size: 70px;
         color: rgb(0, 0, 0);
         text-align: center;
     }
+    .botoes {
+        width: 24%;
+    }
+}
+.aba1 {
+    width: 100%;
+    height: 400px;
+    background-color: bisque;
+    display: none;
+}
+.aba2 {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 183, 96);
+    display: none;
+}
+.aba3 {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(172, 149, 255);
+    display: none;
+}
+.aba4 {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(141, 187, 255);
+    display: none;
 }
 
 @media (min-width: 1228px){
@@ -37,14 +75,17 @@
         height: 200px;
         background-color: rgb(197, 161, 150);
     }
-    .tablet{
+    #tablet{
         display: none;
     }
-    .desktop{
+    #desktop{
         display: inline;
         font-size: 80px;
         color: rgb(0, 0, 0);
         text-align: center;
+    }
+    .botoes {
+        width: 24%;
     }
 }
 .rodape{
