@@ -26,10 +26,12 @@
             <button class="botoes" onclick="escolher_aba(4)" id="btn4">aba 04</button>
         </div>
         <div class="divisoes">
-            <div class="aba1" id="ab1"></div>
-            <div class="aba2" id="ab2"></div>
-            <div class="aba3" id="ab3"></div>
-            <div class="aba4" id="ab4"></div>
+            <div class="abageral aba1" id="ab1">
+                Hora atual: <span id="h"></span>
+            </div>
+            <div class="abageral aba2" id="ab2"></div>
+            <div class="abageral aba3" id="ab3"></div>
+            <div class="abageral aba4" id="ab4"></div>
         </div>
     </div>
    </section>
@@ -38,7 +40,8 @@
     Direitos reservados: Erica
    </footer>
    <script>
-    escolher_aba(1)
+   escolher_aba(1);
+   hora_atual();
    </script>
 </body>
 </html>

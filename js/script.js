@@ -1,4 +1,12 @@
 impreme = (msg) => console.log(msg);
+const data = new Date();
+function hora_atual(){
+    setInterval(() => {
+        document.getElementById("h").innerHTML = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
+        hora_atual();
+    },1000)
+}
+
 
 fazerSorteio = () => {
     num1 = document.getElementById("inicio").value;
@@ -21,21 +29,21 @@ function escolher_aba(btn){
     if(btn == "1"){
         document.getElementById("btn1").style.backgroundColor = "#a7c9e4"
         document.getElementById("btn1").disabled = true;
-        document.getElementById("ab1").style.display = "none";
+        document.getElementById("ab1").style.display = "block";
     }
     if(btn == "2"){
         document.getElementById("btn2").style.backgroundColor = "#a7c9e4"
         document.getElementById("btn2").disabled = true;
-        document.getElementById("ab2").style.display = "none";
+        document.getElementById("ab2").style.display = "block";
     }
     if(btn == "3"){
         document.getElementById("btn3").style.backgroundColor = "#a7c9e4"
         document.getElementById("btn3").disabled = true;
-        document.getElementById("ab3").style.display = "none";
+        document.getElementById("ab3").style.display = "block";
     }
     if(btn == "4"){
         document.getElementById("btn4").style.backgroundColor = "#a7c9e4"
         document.getElementById("btn4").disabled = true;
-        document.getElementById("ab4").style.display = "none";
+        document.getElementById("ab4").style.display = "block";
     }
 }
