@@ -1,13 +1,3 @@
-impreme = (msg) => console.log(msg);
-const data = new Date();
-function hora_atual(){
-    setInterval(() => {
-        document.getElementById("h").innerHTML = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
-        hora_atual();
-    },1000)
-}
-
-
 fazerSorteio = () => {
     num1 = document.getElementById("inicio").value;
     num2 = document.getElementById("fim").value;
@@ -15,6 +5,15 @@ fazerSorteio = () => {
     let sorteio = Math.floor( Math.random() * (Number(num2) - Number(num1)) );
 
     document.getElementById("resultado").innerHTML = sorteio;
+}
+
+impreme = (msg) => console.log(msg);
+const data = new Date();
+function hora_atual(){
+    setInterval(() => {
+        document.getElementById("h").innerHTML = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
+        hora_atual();
+    },1000)
 }
 
 function escolher_aba(btn){
@@ -46,4 +45,21 @@ function escolher_aba(btn){
         document.getElementById("btn4").disabled = true;
         document.getElementById("ab4").style.display = "block";
     }
+}
+let contador = null;
+let inicio = 0;
+let fim = 0;
+function contagem(){
+    if(inicio == fim +1) contador.clearInterval();
+    else{
+        document.getElementById("valor").innerHTML = inicio;
+        inicio++
+    }
+}
+function iniciar(){
+    inicio = document.getElementById("inicio").value;
+    fim = document.getElementById("fim").value;
+    contador = setInterval(() => {
+        contagem();
+    }, 1000);
 }
