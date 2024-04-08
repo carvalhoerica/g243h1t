@@ -8,12 +8,12 @@ fazerSorteio = () => {
 }
 
 impreme = (msg) => console.log(msg);
-const data = new Date();
-function hora_atual(){
-    setInterval(() => {
+function hora_atual (){
+    const data = new Date();
+    setTimeout(() => {
         document.getElementById("h").innerHTML = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
         hora_atual();
-    },1000)
+    }, 1000);
 }
 
 function escolher_aba(btn){
@@ -39,6 +39,10 @@ function escolher_aba(btn){
         document.getElementById("btn3").style.backgroundColor = "#a7c9e4"
         document.getElementById("btn3").disabled = true;
         document.getElementById("ab3").style.display = "block";
+        iniciar_despertador();
+        document.getElementById("hora_d").value = hora_d
+        document.getElementById("min_d").value = min_d
+        document.getElementById("seg_d").value = seg_d
     }
     if(btn == "4"){
         document.getElementById("btn4").style.backgroundColor = "#a7c9e4"
@@ -50,10 +54,10 @@ let contador = null;
 let inicio = 0;
 let fim = 0;
 function contagem(){
-    if(inicio == fim +1) contador.clearInterval();
+    if(inicio == Number(fim) + 1) contador.clearInterval();
     else{
         document.getElementById("valor").innerHTML = inicio;
-        inicio++
+        inicio++;
     }
 }
 function iniciar(){
@@ -62,4 +66,29 @@ function iniciar(){
     contador = setInterval(() => {
         contagem();
     }, 1000);
+}
+
+let hora_d;
+let min_d;
+let seg_d;
+function iniciar_despertador(){
+    let d = new Date();
+    hora_d = d.getHours();
+    min_d = d.getMinutes();
+    seg_d = d.getSeconds();
+}
+let despertar = null;
+function ligar_despertador(){
+    let d = new Date();
+    if(d.getHours() == hora_d && d.getMinutes() == min_d && d.getSeconds() == seg_d){
+        clearInterval(despertar);
+        alert("alarme.");
+        escolher_aba(3);
+        }
+}
+function ajustar(){
+    hora_d = document.getElementById("hora_d").value;
+    min_d = document.getElementById("min_d").value;
+    seg_d = document.getElementById("seg_d").value;
+    despertar = setInterval(ligar_despertador,1000);
 }
